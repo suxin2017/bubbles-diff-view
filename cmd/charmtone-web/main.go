@@ -15,7 +15,7 @@ import (
 )
 
 type swatch struct {
-  Key       string `json:"key"`
+	Key       string `json:"key"`
 	Name      string `json:"name"`
 	Label     string `json:"label"`
 	Hex       string `json:"hex"`
@@ -79,7 +79,7 @@ func palette() []swatch {
 		r, g, b := rgb8(k)
 		hex := k.Hex()
 		out = append(out, swatch{
-      Key:       keyIdent(k),
+			Key:       keyIdent(k),
 			Name:      k.String(),
 			Label:     k.String(),
 			Hex:       hex,
@@ -96,16 +96,16 @@ func palette() []swatch {
 }
 
 func keyIdent(k charmtone.Key) string {
-  switch k {
-  case charmtone.Mochi:
-    return "Mochi"
-  case charmtone.NeueGuac:
-    return "NeueGuac"
-  case charmtone.NeueZinc:
-    return "NeueZinc"
-  default:
-    return strings.ReplaceAll(k.String(), " ", "")
-  }
+	switch k {
+	case charmtone.Mochi:
+		return "Mochi"
+	case charmtone.NeueGuac:
+		return "NeueGuac"
+	case charmtone.NeueZinc:
+		return "NeueZinc"
+	default:
+		return strings.ReplaceAll(k.String(), " ", "")
+	}
 }
 
 func writeStaticHTML(path string, colors []swatch) error {
