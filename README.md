@@ -30,6 +30,8 @@ go run ./cmd/demo path/to/old.txt path/to/new.txt
 
 ## Charmtone Web Palette
 
+Live page: <https://suxin2017.cc/bubbles-diff-view/>
+
 Run the palette web server:
 
 ```bash
