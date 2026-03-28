@@ -1,0 +1,13 @@
+# Go build outputs
+bin/
+dist/
+*.exe
+*.out
+
+# Test artifacts
+*.test
+*.prof
+coverage.out
+
+# IDE
+.vscode/
